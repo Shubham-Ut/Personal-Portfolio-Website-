@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Shubham Utekar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      overflow-x: hidden;
+    }
+
+   
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 60px;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 40px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background-color: #000;
+      transition: width 0.3s ease;
+    }
+
+    a:hover {
+      color: #333;
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+  
+    .about-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      padding: 60px 5%;
+      animation: fadeSlideIn 1s ease;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .about-img img {
+      width: 350px;
+      animation: floatThumb 3s ease-in-out infinite;
+    }
+
+    @keyframes floatThumb {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    .about-text {
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .about-text h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #111;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .about-text h1:hover {
+      letter-spacing: 2px;
+      color: #222;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.8;
+      transition: transform 0.3s ease;
+    }
+
+    .about-text p:hover {
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-img img {
+        width: 280px;
+        margin-right: 100px;
+      }
+    }
+    header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #494949;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+a:hover {
+  color: #000000;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.projects-container {
+  padding: 60px 5%;
+}
+
+.projects-container h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #111;
+  opacity: 0;
+  animation: fadeInHeader 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInHeader {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive navbar adjustments */
+@media (max-width: 768px) {
+  ul {
+    gap: 20px;
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    padding: 8px 16px;
+    gap: 15px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="page-content">
+    
+    <header>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </header>
+
+    
+    <section class="about-section">
+      <div class="about-img">
+        <img src="./Screenshot_2025-06-23_124957-removebg-preview.png" alt="Shubham Thumbs Up" />
+      </div>
+      <div class="about-text">
+        <h1>Shubham Utekar</h1>
+        <p>
+          A passionate student currently pursuing my degree in Bachelor of Technology in Computer Science and Engineering.  at D Y PATIL INTERNATIONAL UNIVERSITY.
+          <br><br>
+          I’m deeply interested in technology, web development, and building practical solutions that make a difference.
+          <br><br>
+          I love creating projects that solve real problems and help me grow my skills.
+          On this website, you’ll find my projects, skills, and achievements.
+          <br><br>
+          I believe in continuous learning and enjoy turning ideas into reality through code, creativity, and collaboration.
+
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll(".nav-link");
+    const page = document.querySelector(".page-content");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetUrl = this.getAttribute("href");
+        page.style.animation = "fadeSlideOut 0.6s forwards";
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 600);
+      });
+    });
+
+    // optional exit animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeSlideOut {
+        to {
+          opacity: 0;
+          transform: translateY(-40px);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

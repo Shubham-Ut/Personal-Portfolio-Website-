@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Shubham Utekar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f8f8f8;
+      overflow-x: hidden;
+    }
+
+    .page-content {
+      animation: fadeSlideIn 0.8s ease;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      position: sticky;
+      top: 0;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 60px;
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 40px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      color: #000;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background-color: #000;
+      transition: width 0.3s ease;
+    }
+
+    a:hover {
+      color: #333;
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+    .projects-container {
+      padding: 60px 5%;
+    }
+
+    .projects-container h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 50px;
+      color: #111;
+    }
+
+    .project {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 80px;
+      gap: 40px;
+      animation: fadeIn 1s ease;
+    }
+
+    .project:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .project-text {
+      flex: 1;
+    }
+
+    .project-text h2 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .project-text p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .project-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .project-image img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .project {
+        flex-direction: column;
+        text-align: center;
+      }
+      .project:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8f8f8;
+  overflow-x: hidden;
+}
+
+.page-content {
+  animation: fadeSlideIn 0.8s ease-in-out;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #494949;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+a:hover {
+  color: #000000;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.projects-container {
+  padding: 60px 5%;
+}
+
+.projects-container h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  color: #111;
+  opacity: 0;
+  animation: fadeInHeader 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInHeader {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: scrollFade 1s forwards;
+  animation-delay: 0.2s;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+
+@keyframes scrollFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.project-text {
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.project-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.project-text p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+  .project:nth-child(even) {
+    flex-direction: column;
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 40px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  ul {
+    gap: 20px;
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  ul {
+    padding: 8px 16px;
+    gap: 15px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="page-content">
+   
+    <header>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </header>
+
+    <section class="projects-container">
+      <h1>Projects</h1>
+
+      <div class="project">
+        <div class="project-text">
+          <h2>Product Landing Page</h2>
+          <p>
+            <b>Description</b>: A visually attractive landing page for a product with call-to-action buttons and responsive design.<br>
+           <b> Features:</b><br>
+           a. Smooth scroll and section transitions<br>
+           b. CTA buttons with hover effects<br>
+           c. Background image and responsive layout<br>
+            <b>Tech Stack:</b> HTML, CSS (with transitions/animations), optional JS<br>
+           <b><a style="font-size: medium;" href="https://youtu.be/0ZSy5-pdGGo?si=RTPde-54srnTKsVr">YouTube</a>
+              <a  style="font-size: medium; margin-left: 10px;" href="https://github.com/Shubham-Ut/Landing-page-of-fictional-product-using-html-and-css">GitHub</a></b>
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="./Screenshot 2025-06-22 152928.png" alt="Project 1 Image">
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-text">
+          <h2>Product Card</h2>
+          <p>
+            <b>Description</b>: A modern product card layout for e-commerce platforms, focusing on aesthetics and interactivity.<br>
+           <b> Features:</b><br>
+           a. Hover animations with smooth transitions<br>
+           b. Product details: image, name, price, rating, and action button<br>
+           c. Clean and modular CSS structure<br>
+           <b>Tech Stack:</b>HTML, CSS, JavaScript<br>
+           <b><a style="font-size: medium;" href="https://youtu.be/gGE2qsob5F0?si=kdkJ7J_MDwg3DyTy">YouTube</a>
+              <a  style="font-size: medium; margin-left: 10px;" href="https://github.com/Shubham-Ut/product-card-using-html-and-css">GitHub</a></b>
+           
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="./Screenshot 2025-06-20 164247.png" alt="Project 2 Image">
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-text">
+          <h2>Blog Page</h2>
+          <p>
+            <b>Description</b>: A clean, responsive blog website developed to share thoughts, experiences, and technical knowledge.<br>
+           <b> Features:</b><br>
+           a. Modern UI/UX with aesthetic typography<br>
+           b. Dynamic blog post structure<br>
+           c. Interactive hover and page sliding transitions<br>
+           d.Fully responsive design<br>
+            <b>Tech Stack:</b>HTML, CSS, JavaScript<br>
+            <b><a style="font-size: medium;" href="https://youtu.be/o76eLgGnBkA?si=X40Sg0wlkbmbM_hH">YouTube</a>
+              <a  style="font-size: medium; margin-left: 10px;" href="https://github.com/Shubham-Ut/simple-blog-page-using-html-and-css-">GitHub</a></b>
+           
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="./Screenshot 2025-06-20 210826.png" alt="Project 2 Image">
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-text">
+          <h2>Weather Application</h2>
+          <p>
+            <b>Description</b>: A weather forecasting interface that displays current weather conditions based on user input.<br>
+           <b> Features:</b><br>
+           a. City-based weather input<br>
+           b. Beautiful background and layout<br>
+           c. Weather info like temperature, wind, humidity, etc.<br>
+           d. Stylish and responsive UI<br>
+            <b>Tech Stack:</b>HTML, CSS, JavaScript (with OpenWeatherMap API if dynamic).<br>
+            <b><a style="font-size: medium;" href="https://youtu.be/dw22lZFUu8w?si=ZchSygTgJyhqh3uD">YouTube</a>
+              <a  style="font-size: medium; margin-left: 10px;" href="https://github.com/Shubham-Ut/-Simple-Weather-App-Interface-Using-HTML-CSS">GitHub</a></b>
+           
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="./Screenshot 2025-06-21 205434.png" alt="Project 2 Image">
+        </div>
+      </div>
+      <div class="project">
+        <div class="project-text">
+          <h2>Quiz Application</h2>
+          <p>
+            <b>Description</b>: A dynamic and interactive quiz web application designed to test users' knowledge across various topics with instant feedback and scoring.<br>
+           <b> Features:</b><br>
+           a. Real-time score tracking<br>
+           b. Timer for each question or quiz session<br>
+           c. Highlights correct/incorrect answers after submission<br>
+           d. Simple and responsive design<br>
+            <b>Tech Stack:</b>HTML, CSS, JavaScript<br>
+            <b>Tech Stack:</b>HTML, CSS, JavaScript (with OpenWeatherMap API if dynamic).<br>
+            <b><a style="font-size: medium;" href="https://youtu.be/S1wSm1yURsE?si=Vw_1MqNQFTChwDeG">YouTube</a>
+              <a  style="font-size: medium; margin-left: 10px;" href="https://github.com/Shubham-Ut/Simple-Quiz-App-Using-HTML-CSS-And-JAVASCRIPT-task4">GitHub</a></b>
+           
+          </p>
+        </div>
+        <div class="project-image">
+          <img src="./Screenshot 2025-06-20 210353.png" alt="Project 2 Image">
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  
+  <script>
+    const links = document.querySelectorAll(".nav-link");
+    const page = document.querySelector(".page-content");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetUrl = this.getAttribute("href");
+        page.style.animation = "fadeOut 0.6s forwards";
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 600);
+      });
+    });
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeOut {
+        to {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

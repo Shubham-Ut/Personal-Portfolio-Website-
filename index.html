@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shubham Utekar | Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #3a4852;
+      --text-light: #000000;
+      --text-dark: #2d3436;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-image: url('./my_image (1).png');  
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .page-content {
+      padding: 40px 20px;
+      animation: slideFadeIn 1s ease-out forwards;
+    }
+
+    @keyframes slideFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      padding: 15px 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 40px;
+      backdrop-filter: blur(10px);
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: var(--text-light);
+      font-weight: 600;
+      font-size: 18px;
+      position: relative;
+    }
+
+    ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: var(--accent);
+      transition: 0.3s;
+    }
+
+    ul li a:hover::after {
+      width: 100%;
+    }
+
+    ul li a:hover {
+      color: var(--accent);
+    }
+
+    .middle {
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .middle h1 {
+      font-size: 3rem;
+      color: var(--text-light);
+      margin-bottom: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: nameFadeUp 1.2s ease-out forwards;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes nameFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .middle p {
+      font-size: 1.6rem;
+      color: var(--text-light);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--accent);
+      width: 0;
+      animation: typing 3.5s steps(30, end) forwards, blink 0.8s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 100;
+    }
+
+    .social-icons a {
+      font-size: 20px;
+      color: var(--text-light);
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+      transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+      ul {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .middle h1 {
+        font-size: 2.2rem;
+      }
+
+      .middle p {
+        font-size: 1.2rem;
+      }
+
+      .social-icons {
+        left: 10px;
+      }
+
+      .social-icons a {
+        font-size: 18px;
+      }
+    }
+      .middle h1 {
+        font-size: 3rem;
+        color: var(--text-light);
+        margin-bottom: 10px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: nameFadeUp 1.2s ease-out forwards;
+        animation-delay: 0.3s;
+        transition: all 0.4s ease-in-out;
+        position: relative;
+        display: inline-block;
+      }
+
+      .middle h1::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        background-color: var(--accent);
+        transition: width 0.4s ease, left 0.4s ease;
+        transform: translateX(-50%);
+      }
+
+      .middle h1:hover {
+        color: var(--accent);
+        letter-spacing: 1px;
+        transform: translateY(0) scale(1.02);
+      }
+
+      .middle h1:hover::before {
+        width: 100%;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="page-content">
+    <header>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </header>
+
+    <div class="middle">
+      <h1>Hi, I'm Shubham Utekar</h1>
+      <p>Frontend Developer | UI/UX Enthusiast</p>
+    </div>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/shubhzz.13/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/Shubham-Ut" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/shubhamutekar/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll(".nav-link");
+    const page = document.querySelector(".page-content");
+
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetUrl = this.getAttribute("href");
+        page.style.animation = "fadeOut 0.6s forwards";
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 600);
+      });
+    });
+  </script>
+</body>
+</html>
